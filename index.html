@@ -1,11 +1,360 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <title>proyElio</title>
-</head>
-<body>
-    <h1>hola mundo Elio</h1>
-    <p>este es un sitio web</p>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>X-CANO | Tecnología e Innovación</title>
 
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      background-color: #000000;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 10px rgb(27, 143, 166);
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: #71def4;
+      letter-spacing: 2px;
+    }
+
+    nav ul.nav-list {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    nav ul.nav-list li a {
+      text-decoration: none;
+      color: #71def4;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav ul.nav-list li a:hover {
+      color: #b0ddb0;
+    }
+
+    /* Hero profesional */
+    .hero {
+      position: relative;
+      height: 90vh;
+      background: linear-gradient(to right, #000000cc, #0d1a2bcc), 
+        url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #f1f5f9;
+      padding: 2rem;
+    }
+
+    .hero-overlay {
+      width: 100%;
+      max-width: 1100px;
+      z-index: 2;
+    }
+
+    .hero-content {
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 5px #000000a0;
+    }
+
+    .hero-subtitle {
+      font-size: 1.5rem;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      line-height: 1.6;
+      text-shadow: 1px 1px 3px #000000a0;
+    }
+
+    .hero-button {
+      background-color: #00bcd4;
+      color: #fff;
+      padding: 14px 30px;
+      font-size: 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .hero-button:hover {
+      background-color: #008c9e;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin: 3rem 0 1.5rem;
+      color: #1a1a1a;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .card {
+      background-color: #f5f5f5;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      max-width: 300px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      border-radius: 8px;
+      width: 100%;
+      height: auto;
+    }
+
+    .card h3 {
+      margin-top: 1rem;
+      color: #00838f;
+    }
+
+    .boton-cuadro {
+      background-color: #041322;
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
+      transition: background-color 0.3s;
+    }
+
+    .boton-cuadro:hover {
+      background-color: #003366;
+    }
+
+    footer {
+      background-color: #000000;
+      color: #cbd5e1;
+      padding: 40px 20px;
+    }
+
+    footer a {
+      color: #94a3b8;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    footer img {
+      width: 18px;
+      height: 18px;
+      margin-right: 6px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul.nav-list {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <h1 class="logo">X-CANO</h1>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#services">Servicios</a></li>
+          <li><a href="#AI">IA</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PORTADA -->
+  <section class="hero" id="inicio">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1 class="hero-title">X-CANO Digital</h1>
+        <p class="hero-subtitle">Soluciones inteligentes, formación avanzada y tecnologíca.</p>
+        <hr>
+        <br>
+        <a>explora un mundo digital con IA</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section id="services" class="services">
+    <h2>Servicios</h2>
+    <a class="boton-cuadro" href="#contacto">Solicita más información</a>
+    <div class="cards">
+      <div class="card">
+        <h3>Capacitación en IA</h3>
+        <p>Cursos especializados y talleres prácticos para dominar tecnologías avanzadas en inteligencia artificial.</p>
+      </div>
+      <div class="card">
+        <h3>Desarrollo de Software</h3>
+        <p>Soluciones personalizadas y robustas para empresas que buscan digitalizar y optimizar sus procesos.</p>
+        </div>
+      <div class="card">
+        <h3>Consultoría Tecnológica</h3>
+        <p>Asesoría experta para implementar IA y tecnologías emergentes con impacto real en tu negocio.</p>
+      </div>
+      <div class="card">
+        <h3>Automatización de Procesos</h3>
+        <p>Optimiza tareas repetitivas con soluciones inteligentes basadas en IA y software RPA. 
+           Aumenta la eficiencia, reduce errores y libera tiempo para lo realmente importante.</p>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Inteligencia Artificial -->
+  <section id="AI">
+    <h2>Descubre la Inteligencia Artificial</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="img/teoria.png" alt="En desarrollo">
+        <h3>Introducción teorica al mundo IA</h3>
+        <p>Explora, aprende y descubre la IA.</p>
+        <a class="boton-cuadro"href="https://cano-ux.github.io/teoria/" target="_blank" >Haz click aquí</a>
+      </div>
+      <div class="card">
+        <img src="img/AI.jpg" alt="IA">
+        <h3>+115 AI</h3>
+        <p>Explora y domina más de 115 herramientas de inteligencia artificial.</p>
+        <a class="boton-cuadro" href="https://cano-ux.github.io/xcanoia.github.io/" target="_blank">Haz click aquí</a>
+
+      </div>
+      <div class="card">
+        <img src="img/unoyb.png" alt="Universidad UNO">
+        <h3>IA para la Redacción Académica</h3>
+        <p>
+          Iniciativa conjunta entre la Universidad <strong>UNO – Sede Yacuiba</strong>,  <strong>CHURAIA</strong> y <strong>X-cano</strong>, orientada a la redacción académica mediante el uso de herramientas de inteligencia artificial.
+        </p>
+        <p>
+          Este espacio está diseñado para estudiantes universitarios, docentes y profesionales que deseen optimizar sus trabajos académicos, investigaciones, artículos y presentaciones utilizando tecnología avanzada.
+        </p>
+        <a class="boton-cuadro" href="https://cano-ux.github.io/curso/" target="_blank">Haz click aquí</a>
+      </div>
+      
+      <div class="card">
+        <img src="img/nodisponible.jpg" alt="En desarrollo">
+        <h3>Próximamente</h3>
+        <p>Más herramientas y cursos en camino.</p>
+        <a class="boton-cuadro">Haz click aquí</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contacto / Footer -->
+  <footer id="contacto">
+    <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+      <div style="flex: 1 1 200px; margin-bottom: 20px;">
+        <h2 style="color: #ffffff;">X-CANO</h2>
+        <p style="font-size: 14px; color: #94a3b8;">Soluciones inteligentes impulsadas por IA.</p>
+      </div>
+      <div style="flex: 1 1 200px; margin-bottom: 20px;">
+        <h3 style="font-size: 16px; margin-bottom: 8px;">Contacto</h3>
+        <p>Email: <a href="mailto:xcano2025@gmail.com">xcano2025@gmail.com</a></p>
+        <p>
+          <a href="https://wa.me/59175774405?text=Hola%20X-cano%20Digital,%20quiero%20más%20información" target="_blank">
+            
+          </a>
+        </p>
+      </div>
+      <div style="flex: 1 1 200px; margin-bottom: 20px;">
+        <h3 style="font-size: 16px; margin-bottom: 8px;">Síguenos</h3>
+        <p>
+          <a href="https://www.facebook.com/XcanoDigitalAI" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Facebook-icon-1.png" alt="Facebook"> Facebook
+          </a>
+        </p>
+        <p>
+          <a href="https://www.instagram.com/x_cano.digital" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"> Instagram
+          </a>
+        </p>
+        <p>
+          <a href="https://www.tiktok.com/@xcano.digital" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046123.png" alt="TikTok"> TikTok
+          </a>
+        </p>
+      </div>
+    </div>
+    <hr style="border-color: #334155; margin: 30px 0;" />
+    <div style="text-align: center; font-size: 13px; color: #64748b;">
+      © 2025 X-CANO. Todos los derechos reservados.
+    </div>
+  </footer>
 </body>
 </html>

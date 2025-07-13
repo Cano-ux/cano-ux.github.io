@@ -20,19 +20,21 @@
     }
 
     .container {
-      width: 90%;
-      max-width: 1200px;
+      width: 70%;
+      max-width: 1000px;
       margin: 0 auto;
     }
 
     header {
-      background-color: #000000;
-      padding: 1rem 0;
       position: sticky;
       top: 0;
       z-index: 999;
-      box-shadow: 0 2px 10px rgb(27, 143, 166);
+      background-color: #000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     }
+
+
+
 
     header .container {
       display: flex;
@@ -41,22 +43,22 @@
     }
 
     .logo {
-      font-size: 2.5rem;
-      font-weight: 900;
+      font-size: 1rem;
+      font-weight: 700;
       color: #71def4;
       letter-spacing: 2px;
     }
 
     nav ul.nav-list {
       display: flex;
-      gap: 1.5rem;
+      gap: 1rem;
       list-style: none;
     }
 
     nav ul.nav-list li a {
       text-decoration: none;
       color: #71def4;
-      font-weight: 600;
+      font-weight: 500;
       transition: color 0.3s ease;
     }
 
@@ -132,12 +134,14 @@
     }
 
     .cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
       gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      justify-items: center;
       margin-bottom: 4rem;
+      padding: 0 1rem;
     }
+
 
     .card {
       background-color: #f5f5f5;
@@ -200,24 +204,19 @@
       height: 18px;
       margin-right: 6px;
     }
+    
 
     @media (max-width: 768px) {
       nav ul.nav-list {
         flex-direction: column;
-        gap: 1rem;
+        gap: 0.5rem;
       }
-
-      .cards {
-        flex-direction: column;
-        align-items: center;
-      }
-
       .hero-title {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
       }
 
       .hero-subtitle {
-        font-size: 1.2rem;
+        font-size: 0.2rem;
       }
     }
   </style>
@@ -225,7 +224,7 @@
 
 <body>
 
-  <header>
+  <header id="mainHeader">
     <div class="container">
       <h1 class="logo">X-CANO</h1>
       <nav>
@@ -284,13 +283,19 @@
       <div class="card">
         <img src="img/teoria.png" alt="En desarrollo">
         <h3>Introducción teorica al mundo IA</h3>
-        <p>Explora, aprende y descubre la IA.</p>
+        <p>📚🤖 Comprende la esencia de la Inteligencia Artificial
+          Explora sus fundamentos, historia, conceptos clave y aplicaciones reales.
+          🧠 Ideal para quienes desean una base sólida antes de utilizar herramientas IA.
+          🚀 Aprende, reflexiona y domina lo teórico para aplicar con criterio.</p>
         <a class="boton-cuadro"href="https://cano-ux.github.io/teoria/" target="_blank" >Haz click aquí</a>
       </div>
       <div class="card">
         <img src="img/AI.jpg" alt="IA">
         <h3>+115 AI</h3>
-        <p>Explora y domina más de 115 herramientas de inteligencia artificial.</p>
+        <p>🧰🤖 Explora un universo de +115 herramientas de Inteligencia Artificial
+          Desde generación de texto hasta creación de imágenes, audio, video y automatización.
+          💡 Domina las mejores IAs del momento y llévalas a tu estudio, trabajo o emprendimiento.
+          🚀 ¡Todo en un solo lugar, actualizado y al alcance de un clic!</p>
         <a class="boton-cuadro" href="https://cano-ux.github.io/xcanoia.github.io/" target="_blank">Haz click aquí</a>
 
       </div>
@@ -305,12 +310,113 @@
         </p>
         <a class="boton-cuadro" href="https://cano-ux.github.io/curso/" target="_blank">Haz click aquí</a>
       </div>
+      <div class="card">
+        <img src="img/videoai.jpg" alt="Generador de Videos">
+        <h3>Genera Videos con IA</h3>
+        <p>🎬✨ ¡Crea videos impactantes con Inteligencia Artificial!
+          Transforma tus ideas en videos profesionales en minutos, sin saber editar.
+          💡 Ideal para estudiantes, docentes, creadores de contenido y emprendedores.
+          🚀 ¡Empieza hoy y sorprende al mundo con tu creatividad!
+
+        </p>
+        <a class="boton-cuadro">Proximamente</a>
+      </div>
+      
+      <div class="card">
+        <img src="img/image.jpg" alt="IA Imágenes">
+        <h3>Genera Fotos con IA</h3>
+        <p>🖼️🎨 ¡Diseña imágenes increíbles con Inteligencia Artificial!
+          Aprende a generar arte digital, fotos realistas y personajes únicos en segundos.
+          ✍️ No necesitas ser diseñador, solo tu creatividad y las herramientas adecuadas.
+          🚀 Ideal para estudiantes, artistas, creadores de contenido y curiosos visuales.</p>
+        <a class="boton-cuadro">Proximamente</a>
+      </div>
+      
+      <div class="card">
+        <img src="img/Automatiza.jpg" alt="Automatización">
+        <h3>Automatiza tu Trabajo con IA</h3>
+        <p>🤖⚙️ Automatiza tu trabajo con Inteligencia Artificial
+          Descubre cómo eliminar tareas repetitivas, organizar datos, responder correos y mucho más.
+          ⏳ Ahorra tiempo, mejora tu productividad y enfócate en lo que realmente importa.
+          🚀 ¡Convierte la IA en tu asistente personal de alto rendimiento!</p>
+        <a class="boton-cuadro">Proximamente</a>
+      </div>
+      
+      <div class="card">
+        <img src="img/produc.jpg" alt="Productividad">
+        <h3>Mejora tu Productividad con IA</h3>
+        <p>⏰💼 Potencia tu productividad con Inteligencia Artificial
+          Organiza tareas, administra tu tiempo y toma mejores decisiones cada día.
+          🧠 Herramientas IA que trabajan contigo para simplificar tu rutina y maximizar resultados.
+          🚀 ¡Haz más en menos tiempo y con mayor inteligencia!</p>
+        <a class="boton-cuadro">Proximamente</a> 
+      </div>
+      
+      <div class="card">
+        <img src="img/ChatGPT.jpg" alt="ChatGPT Pro">
+        <h3>Domina ChatGPT</h3>
+        <p>💬🧠 Domina ChatGPT como un profesional
+          Aprende a crear prompts poderosos, redactar textos de alto nivel y generar contenido original con facilidad.
+          ✍️ Ideal para estudiantes, docentes, creadores y profesionales de cualquier área.
+          🚀 ¡Exprime al máximo el potencial de esta herramienta revolucionaria!</p>
+        <a class="boton-cuadro">Proximamente</a>
+      </div>
+      
+      <div class="card">
+        <img src="img/estudiantes.webp" alt="IA Estudiantes">
+        <h3>IA para Estudiantes</h3>
+        <p>🎓📚 Impulsa tu vida académica con Inteligencia Artificial
+          Organiza tus estudios, mejora tus investigaciones y prepárate para exámenes como nunca antes.
+          🧠 Herramientas IA que te ayudan a aprender más rápido y con menos esfuerzo.
+          🚀 ¡Estudia de forma inteligente y alcanza tu máximo potencial!</p>
+        <a class="boton-cuadro">Proximamente</a> 
+      </div>
+      
+      <div class="card">
+        <img src="img/programacion.jpg" alt="IA para Programadores">
+        <h3>Programa con IA</h3>
+        <p>👨‍💻⚡ Programa más rápido e inteligente con IA
+          Aprende a usar herramientas como ChatGPT, Claude, GitHub Copilot, Replit, Codeium y más.
+          💻 Crea tu propia página web, blog o app con el poder de la inteligencia artificial.
+          🚀 ¡Ideal para estudiantes, desarrolladores y entusiastas del código moderno!</p>
+        <a class="boton-cuadro">Proximamente</a>  
+      </div>
+      
+      <div class="card">
+        <img src="img/idiomas2.jpg" alt="Idiomas con IA">
+        <h3>Aprende Idiomas con IA</h3>
+        <p>🌍🗣️ Aprende idiomas más rápido con Inteligencia Artificial
+          Descubre herramientas IA que te ayudan a practicar, traducir y mejorar tu fluidez en múltiples lenguas.
+          📱 Ideal para estudiantes, viajeros y autodidactas que buscan dominar nuevos idiomas de forma divertida y eficaz.
+          🚀 ¡Habla, escribe y comprende con confianza usando tecnología de vanguardia!</p>
+        <a class="boton-cuadro">Proximamente</a>  
+      </div>
+      
+      <div class="card">
+        <img src="img/negocios.jpg" alt="IA para Negocios">
+        <h3>IA para Emprendedores y Negocios</h3>
+        <p>💼🤖 Impulsa tu negocio con Inteligencia Artificial
+          Descubre cómo lanzar, escalar y gestionar tu emprendimiento de forma más rápida, eficiente e inteligente.
+          📊 Automatiza procesos, analiza datos y toma decisiones estratégicas con ayuda de la IA.
+          🚀 ¡Ideal para emprendedores, freelancers y visionarios digitales!</p>
+        <a class="boton-cuadro">Proximamente</a>  
+      </div>
+      
+      <div class="card">
+        <img src="img/docenteai.png" alt="IA Docente">
+        <h3>IA para Profesores, docentes, educadores en general</h3>
+        <p>👩‍🏫📚 IA para educadores del futuro
+          Curso exclusivo para docentes, profesores y profesionales que imparten conocimiento.
+          Aprende a integrar la inteligencia artificial en tus clases, materiales y estrategias didácticas.
+          🚀 Transforma tu forma de enseñar con tecnología innovadora y accesible.</p>
+        <a class="boton-cuadro">Proximamente</a>  
+      </div>
       
       <div class="card">
         <img src="img/nodisponible.jpg" alt="En desarrollo">
         <h3>Próximamente</h3>
         <p>Más herramientas y cursos en camino.</p>
-        <a class="boton-cuadro">Haz click aquí</a>
+        <a class="boton-cuadro">Proximamente</a>
       </div>
 
     </div>
@@ -319,18 +425,28 @@
   <!-- Contacto / Footer -->
   <footer id="contacto">
     <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
-      <div style="flex: 1 1 200px; margin-bottom: 20px;">
+      <div style="flex: 1 1 50px; margin-bottom: 22px;">
         <h2 style="color: #ffffff;">X-CANO</h2>
         <p style="font-size: 14px; color: #94a3b8;">Soluciones inteligentes impulsadas por IA.</p>
       </div>
       <div style="flex: 1 1 200px; margin-bottom: 20px;">
-        <h3 style="font-size: 16px; margin-bottom: 8px;">Contacto</h3>
-        <p>Email: <a href="mailto:xcano2025@gmail.com">xcano2025@gmail.com</a></p>
+        <h3 style="font-size: 22px; margin-bottom: 15px; color: #ffffff; font-weight: 700;">Contáctenos</h3>
+
         <p>
-          <a href="https://wa.me/59175774405?text=Hola%20X-cano%20Digital,%20quiero%20más%20información" target="_blank">
-            
+          <a href="https://wa.me/59170213044" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30"> 70213044
           </a>
         </p>
+        <p>
+          <a href="https://wa.me/59161865265" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30"> 61865265
+          </a>
+        </p>
+        <br>
+        <p>📧 <a href="mailto:danco13281@gmail.com">danco13281@gmail.com</a></p>
+        <p>📧 <a href="mailto:gerencia@jpcruzovando.com">gerencia@jpcruzovando.com</a></p>
+        <p>📧 <a href="mailto:xcano2025@gmail.com">xcano2025@gmail.com</a></p>
+        
       </div>
       <div style="flex: 1 1 200px; margin-bottom: 20px;">
         <h3 style="font-size: 16px; margin-bottom: 8px;">Síguenos</h3>
@@ -356,5 +472,30 @@
       © 2025 X-CANO. Todos los derechos reservados.
     </div>
   </footer>
+  
+
+  <script>
+    const header = document.querySelector('header');
+    const stopper = document.querySelector('#AI'); // o footer
+  
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          header.style.position = 'absolute';
+        } else {
+          header.style.position = 'sticky';
+        }
+      },
+      { rootMargin: '0px', threshold: 0 }
+    );
+  
+    if (stopper) {
+      observer.observe(stopper);
+    }
+  </script>
+  
+  
+  
+  
 </body>
 </html>
